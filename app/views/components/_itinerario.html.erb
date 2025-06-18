@@ -1,0 +1,31 @@
+<section
+    class="relative bg-cover bg-center text-white py-12 px-6 md:px-24">
+    <div class="relative z-10">
+        <!-- Top section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
+            <div>
+                <p class="text-sm text-[#0c3261]  mb-2 font-medium"><%= introduzionetext %></p>
+                <h2 class="text-3xl text-[#b32e2b] md:text-5xl font-extrabold leading-tight max-w-lg"><%= introduzionetitle %></h2>
+            </div>
+            
+        </div>
+        <!-- Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <% cards.each do |card| %>
+                <div class="bg-opacity-80 rounded-lg overflow-hidden shadow-lg">
+                    <img
+                        src=<%= card[:image] %>
+                        alt="Card Title"
+                        class="w-full h-[300px] md:h-[500px] object-cover"
+                    />
+                    <div class="p-4 md:p-6">
+                        <h4 class="text-lg text-[#b32e2b] md:text-2xl font-bold"><%= card[:title] %></h4>
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <h4 class="text-lg text-[#0c3261] md:text-md font-normal"><%= card[:description] %></h4>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</section>

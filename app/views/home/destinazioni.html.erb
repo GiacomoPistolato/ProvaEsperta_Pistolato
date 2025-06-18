@@ -1,0 +1,79 @@
+<%# ===================== HERO DELLA PAGINA ===================== %>
+<div class="relative bg-gradient-to-br from-white to-sky-100 bg-cover bg-center">
+    <%= render partial: "components/itinerario",
+        locals: {
+            introduzionetitle: "TUTTE LE DESTINAZIONI DELL'ITINERARIO",
+            introduzionetext: "10 giorni di avventure indimenticabili tra città iconiche e meraviglie naturali",
+            
+            cards: [
+                {
+                    image: "/images/destinazioni/SFrancisco.jpg",
+                    title: "Giorni 1-2 · San Francisco: tra nebbia, tram e libertà",
+                    description: 
+                        "Benvenuti a San Francisco, dove il vento profuma di oceano e la creatività si respira ad ogni angolo. " \
+                        "Iniziate l’esperienza attraversando l’iconico Golden Gate Bridge, magari in bicicletta: un rito simbolico per entrare in sintonia con la città. " \
+                        "Proseguite verso Alamo Square e ammirate le Painted Ladies, le famose villette vittoriane con skyline sullo sfondo, perfette per una sosta fotografica.\n\n" \
+                        "Per un assaggio di vita locale, vi porteremo al Ferry Building, ricco di sapori artigianali, prodotti freschi e storie raccontate attraverso il cibo. " \
+                        "Se viaggiate con bambini, consigliamo una tappa speciale al Monterey Bay Aquarium: un luogo magico dove il tempo si ferma davanti a squali, meduse e creature marine.\n\n" \
+                        "Nel tardo pomeriggio, salite fino a Twin Peaks: lo sguardo abbraccia tutta la città mentre il tramonto la veste di oro e arancio. " \
+                        "E per chi cerca l’anima autentica della città, vi porteremo lontano da Union Square, nei quartieri in salita, sui tram vintage, " \
+                        "tra i murales del Mission District e i mercati profumati di Chinatown. Qui, San Francisco si rivela a chi sa perdersi con gioia."
+                },
+                {
+                    image: "/images/destinazioni/GCanyon.jpg",
+                    title: "Giorni 3-4 · Grand Canyon: la meraviglia che parla al cuore",
+                    description: 
+                        "Prossima tappa: Grand Canyon. Questo non è solo un luogo, è un'emozione viscerale. " \
+                        "Con il nostro itinerario, vivrete l’alba dal South Rim, uno spettacolo silenzioso dove la natura si trasforma in poesia tra luci calde e canyon infiniti.\n\n" \
+                        "Con i più piccoli? Nessun problema. Abbiamo selezionato per voi sentieri adatti a tutta la famiglia, come i tratti iniziali del Bright Angel Trail, " \
+                        "perfetti per vivere il silenzio, ascoltare il vento e condividere un momento unico. " \
+                        "Ogni passo in questo paesaggio insegna a rallentare e ad ascoltare — se stessi, la natura, l’attimo.\n\n" \
+                        "Il Grand Canyon si visita con lentezza e rispetto. È un invito alla meraviglia, e anche i bambini, con i loro occhi sinceri, sapranno coglierne la magia."
+                },
+                {
+                    image: "/images/destinazioni/LVegas.jpg",
+                    title: "Giorni 5-6 · Las Vegas: stupore, luci e un pizzico di deserto",
+                    description: 
+                        "Benvenuti a Las Vegas, la città dove tutto può accadere. Con il nostro itinerario personalizzato vivrete la Strip tra luci, " \
+                        "fontane danzanti e hotel iconici come la Torre Eiffel e la Sfinge. Ma non finisce qui.\n\n" \
+                        "Abbiamo pensato anche alle famiglie: acquari, giostre, spettacoli per bambini, cupole stellate e perfino montagne russe tra i grattacieli. " \
+                        "Molti hotel offrono anche servizi dedicati ai più piccoli, per concedervi qualche ora di puro relax.\n\n" \
+                        "Oltre i neon, c’è un lato inaspettato: spettacoli teatrali raffinati, gallerie d’arte e oasi di tranquillità. " \
+                        "E se volete una pausa rigenerante, vi porteremo nel Red Rock Canyon o nella Valley of Fire: un deserto vivo, vibrante, dove correre, esplorare e immaginare.\n\n" \
+                        "Las Vegas non è solo un sogno a colori: è anche un luogo dove riscoprire, tra un sorriso e una sorpresa, la bellezza di viaggiare con meraviglia."
+                },
+                {
+                    image: "/images/destinazioni/Norleans.jpg",
+                    title: "Giorni 7-8 · New Orleans: il jazz nell’anima",
+                    description: 
+                        "A New Orleans non si visita: si vive. Con il nostro itinerario, scoprirete la città attraverso il suo battito più profondo: il jazz. " \
+                        "Vi accompagneremo nel cuore del French Quarter, tra vicoli, balconi in ferro battuto e musica che sgorga ovunque. " \
+                        "Ogni angolo ha una storia, ogni suono ha un volto.\n\n" \
+                        "I bambini ameranno l’atmosfera festosa, i tram storici e le corse lente tra ville e magnolie sullo St. Charles Streetcar. " \
+                        "Per le famiglie, il Garden District offre passeggiate tra architetture eleganti e caffè raccolti.\n\n" \
+                        "La sera, ci sposteremo su Frenchmen Street, dove la musica esplode in locali come Snug Harbor e The Spotted Cat, adatti anche a famiglie. " \
+                        "E per una vera avventura, vi proponiamo un tour nelle paludi della Louisiana: tra cipressi e alligatori, vivrete un’esperienza affascinante e indimenticabile.\n\n" \
+                        "New Orleans si ascolta con il cuore, si vive con i sensi, si ricorda con un sorriso."
+                },
+                {
+                    image: "/images/destinazioni/Montreal.jpg",
+                    title: "Giorni 9-10 · Montréal: arte, cultura e sapori da scoprire",
+                    description: 
+                        "Chiudiamo il nostro itinerario a Montréal, dove l’anima francese incontra il ritmo nordamericano. " \
+                        "Iniziamo dalla Vieux-Montréal, la città vecchia, tra strade acciottolate, caffè dal sapore parigino e una lentezza che fa bene.\n\n" \
+                        "Pensiamo anche ai più piccoli: tra Mont Royal, i parchi gioco, festival interattivi e scoiattoli che fanno capolino, ogni giornata diventa un’avventura. " \
+                        "E per una pausa golosa, niente di meglio della mitica poutine!\n\n" \
+                        "Vi accompagneremo nei quartieri più creativi, tra street art e gallerie contemporanee come Station 16, Galerie C.O.A e Galerie Yves Laroche. " \
+                        "Se capitate durante un festival, vivrete Montréal al massimo: spettacoli di luce, artisti di strada, circo e musica ovunque.\n\n" \
+                        "Anche sotto la neve, questa città vi invita a camminare, ad esplorare, a sorridere. " \
+                        "Montréal non è solo una meta: è un’emozione continua, perfetta per adulti e bambini, tra cultura, bellezza e libertà."
+                },
+                # Card solo immagine
+                {
+                    image_only: true,
+                    image: "/images/destinazioni/finale.jpg"
+                }
+            ]
+        }
+    %>
+</div>

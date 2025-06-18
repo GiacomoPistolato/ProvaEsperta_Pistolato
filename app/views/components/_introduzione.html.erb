@@ -1,36 +1,41 @@
-<div class="text-white flex flex-col gap-12 mt-14 px-4 sm:px-8">
+<div class="text-white flex flex-col mt-14 px-4 sm:px-8 items-center">
 
     <!-- Prima sezione -->
-    <div class="rounded-xl p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8">
+    <div class="rounded-xl p-6 md:p-10 flex flex-col md:flex-row items-center justify-center w-full max-w-4xl">
         <!-- Testo a sinistra -->
-        <div class="md:w-1/2">
+        <div class="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
             <h2 class="text-lg text-[#b32e2b] sm:text-xl md:text-2xl font-bold mb-4 sm:mb-6">
-               <%=titolo1 %>
+               <%= titolo1 %>
             </h2>
             <p class="text-[#0c3261] text-xs sm:text-sm">
-            <%=testo1%>
+            <%= testo1 %>
             </p>
         </div>
         <!-- Immagine a destra -->
-        <div class="md:w-1/2 flex justify-center">
-            <img src="<%=immagine1%>" alt="Introduzione" class="rounded-lg shadow-lg w-full max-w-md object-cover h-64 md:h-80" />
+        <div class="md:w-1/2 mr-12 flex justify-center">
+            <img src="<%= immagine1 %>" alt="Introduzione" class="rounded-lg shadow-lg w-full max-w-md object-cover h-64 md:h-80" />
         </div>
     </div>
 
     <!-- Seconda sezione -->
-    <div class="rounded-xl p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8">
+    <div class="rounded-xl p-6 md:p-10 flex flex-col md:flex-row items-center justify-center w-full max-w-4xl mt-8">
         <!-- Immagine a sinistra -->
-        <div class="md:w-1/2 flex justify-center">
-            <img src="<%=immagine2%>" alt="Combinazione perfetta" class="rounded-lg shadow-lg w-full max-w-md object-cover h-64 md:h-80" />
+        <div class="md:w-1/2 mr-12 flex justify-center">
+            <img src="<%= immagine2 %>" alt="Combinazione perfetta" class="rounded-lg shadow-lg w-full max-w-md object-cover h-64 md:h-80" />
         </div>
         <!-- Testo a destra -->
-        <div class="md:w-1/2">
+        <div class="md:w-1/2 flex flex-col items-center md:items-end text-center md:text-right">
             <h2 class="text-lg text-[#b32e2b] sm:text-xl md:text-2xl font-bold mb-4 sm:mb-6">
-                <%=titolo2%>
+                <%= titolo2 %>
             </h2>
             <p class="text-[#0c3261] text-xs sm:text-sm">
-                <%=testo2%>
+                <%= testo2 %>
             </p>
         </div>
+    </div>
+
+    <!-- Terza sezione: solo immagine -->
+    <div class="rounded-xl p-6 md:p-10 flex items-center justify-center w-full max-w-4xl mt-8">
+        <img src="<%= immagine3 %>" alt="Immagine finale" class="rounded-lg shadow-lg w-full max-w-2xl object-cover h-64 md:h-80" />
     </div>
 </div>
