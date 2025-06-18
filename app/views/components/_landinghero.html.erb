@@ -1,0 +1,32 @@
+<div class="relative z-10 flex flex-col h-full">
+
+    <%# --- HEADER: Logo e Navigazione --- %>
+    <header class="flex flex-col md:flex-row justify-center items-center px-4 md:px-6 py-4 space-y-4 md:space-y-0">
+        
+        <%# Logo %>
+        <div class="flex justify-center md:justify-start w-full md:w-auto">
+            <img src="<%= logo_pisto %>" alt="<%= logo_alt %>" class="h-20 md:h-20 mx-auto">
+        </div>
+    </header>
+
+    <%# --- SEZIONE HERO: Titolo, Sottotitolo e Immagine --- %>
+    <div class="mt-6 md:mt-10 flex flex-col items-center text-center px-4 md:px-20 w-full">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center w-full max-w-6xl">
+
+            <%# Testo: Titolo e Sottotitolo %>
+            <div class="space-y-4 text-left">
+                <h1 class="text-3xl text-[#b32e2b] sm:text-4xl md:text-6xl font-extrabold break-words">
+                    <%= titolo %>
+                </h1>
+                <p class="text-base text-[#0c3261] sm:text-lg md:text-xl leading-relaxed">
+                    <%= sottotitolo %>
+                </p>
+            </div>
+
+            <%# Immagine Hero %>
+            <div class="flex justify-center">
+                <img src="<%= img_src %>" alt="Hero" class="max-w-[220px] sm:max-w-xs md:max-w-full h-auto rounded-full ml-0 md:ml-44 object-cover aspect-square">
+            </div>
+        </div>
+    </div>
+</div>

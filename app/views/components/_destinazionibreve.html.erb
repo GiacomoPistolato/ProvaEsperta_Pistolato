@@ -1,0 +1,57 @@
+<section class="text-white py-8 px-2 relative">
+    <!-- Titolo principale -->
+    <div class="max-w-5xl mx-auto text-center mb-8">
+        <h2 class="text-3xl text-[#b32e2b] font-bold">Le principali destinazioni</h2>
+    </div>
+
+    <div class="relative max-w-5xl mx-auto mt-8">
+        <div class="grid grid-cols-1 gap-2 md:grid-cols-3">
+            <% cards.each_with_index do |card, index| %>
+                <% if index == 0 %>
+                    <!-- Prima immagine: verticale a sinistra -->
+                    <div class="relative group overflow-hidden rounded-lg col-span-1 row-span-2">
+                        <img src="<%= card[:image] %>" alt="<%= card[:title] %>" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-transparent to-transparent p-4">
+                            <p class="text-sm text-gray-300"><%= card[:description] %></p>
+                            <h3 class="text-lg font-semibold"><%= card[:title] %></h3>
+                        </div>
+                    </div>
+                <% elsif index < 3 %>
+                    <!-- Seconda e terza immagine: quadrate a destra -->
+                    <div class="relative group overflow-hidden rounded-lg col-span-1 row-span-1">
+                        <img src="<%= card[:image] %>" alt="<%= card[:title] %>" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-transparent to-transparent p-4">
+                            <p class="text-sm text-gray-300"><%= card[:description] %></p>
+                            <h3 class="text-lg font-semibold"><%= card[:title] %></h3>
+                        </div>
+                    </div>
+                <% elsif index == 3 %>
+                    <!-- Quarta immagine: larga in basso -->
+                    <div class="relative group overflow-hidden rounded-lg col-span-2 row-span-1">
+                        <img src="<%= card[:image] %>" alt="<%= card[:title] %>" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-transparent to-transparent p-4">
+                            <p class="text-sm text-gray-300"><%= card[:description] %></p>
+                            <h3 class="text-lg font-semibold"><%= card[:title] %></h3>
+                        </div>
+                    </div>
+                <% else %>
+                    <!-- Quinta immagine (e oltre): grande su tutta la larghezza -->
+                    <div class="relative group overflow-hidden rounded-lg col-span-3 row-span-1">
+                        <img src="<%= card[:image] %>" alt="<%= card[:title] %>" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-transparent to-transparent p-4">
+                            <p class="text-sm text-gray-300"><%= card[:description] %></p>
+                            <h3 class="text-lg font-semibold"><%= card[:title] %></h3>
+                        </div>
+                    </div>
+                <% end %>
+            <% end %>
+        </div>
+
+        <!-- Link a tutte le destinazioni -->
+        <div class="mt-10 text-center">
+            <a href="#" class="text-sm text-[#0c3261] tracking-wide uppercase border-b hover:text-[#0c3261c4] transition">
+                — Tutte le destinazioni
+            </a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,144 @@
+<section class="py-12">
+    <div class="max-w-screen-xl mx-auto px-4">
+        <!-- Titolo principale -->
+        <h2 class="text-xl text-[#b32e2b] font-bold mb-6">E se ti interessa la cultura</h2>
+
+        <!-- Inizio carousel orizzontale -->
+        <div class="relative">
+            <!-- Container cards scrollabile -->
+            <div
+                id="carousel-container"
+                class="flex gap-6 overflow-x-auto pb-4 no-scrollbar scroll-smooth"
+                style="-webkit-overflow-scrolling: touch;"
+            >
+                <!-- CARD 1 -->
+                <div
+                    class="w-[90vw] max-w-[400px] h-[60vw] max-h-[320px] rounded-3xl p-6 md:p-8 flex-shrink-0 shadow-lg relative bg-cover bg-center flex flex-col justify-between"
+                    style="background-image: url('/images/beatgen.png');"
+                >
+                    <div>
+                        <h3 class="text-lg md:text-xl font-extrabold text-white mb-3 leading-tight">SAN FRANCISCO</h3>
+                        <p class="text-sm md:text-base text-white mb-3">
+                            Negli anni ’50, la città fu il cuore pulsante della Beat Generation, un movimento letterario e culturale
+                        </p>
+                    </div>
+                    <a href="#" class="inline-block bg-[#0c3261] text-white text-xs md:text-sm font-bold px-4 md:px-6 py-2 md:py-3 rounded-xl self-start">
+                        SCOPRI DI PIÙ
+                    </a>
+                </div>
+
+                <!-- CARD 2 -->
+                <div
+                    class="w-[90vw] max-w-[400px] h-[60vw] max-h-[320px] rounded-3xl p-6 md:p-8 flex-shrink-0 shadow-lg relative bg-cover bg-center flex flex-col justify-between"
+                    style="background-image: url('/images/jazz.jpg');"
+                >
+                    <div>
+                        <h3 class="text-lg md:text-xl font-extrabold text-white mb-3 leading-tight">NEW ORLEANS</h3>
+                        <p class="text-sm md:text-base text-white mb-3">
+                            Scopri l’imperdibile storia del jazz, nato qui, dall’incontro tra ritmi africani, spiritual e blues.
+                        </p>
+                    </div>
+                    <a href="#" class="inline-block bg-[#0c3261] text-white text-xs md:text-sm font-bold px-4 md:px-6 py-2 md:py-3 rounded-xl self-start">
+                        SCOPRI DI PIÙ
+                    </a>
+                </div>
+
+                <!-- CARD 3 -->
+                <div
+                    class="w-[90vw] max-w-[400px] h-[60vw] max-h-[320px] rounded-3xl p-6 md:p-8 flex-shrink-0 shadow-lg relative bg-cover bg-center flex flex-col justify-between"
+                    style="background-image: url('/images/montreal1.jpg');"
+                >
+                    <div>
+                        <h3 class="text-lg md:text-xl font-extrabold text-white mb-3 leading-tight">MONTREAL</h3>
+                        <p class="text-sm md:text-base text-white mb-5">
+                            Se ami l’arte che vibra tra le strade e parla direttamente all’anima, Montréal saprà sorprenderti. 
+                        </p>
+                    </div>
+                    <a href="#" class="inline-block bg-[#0c3261] text-white text-xs md:text-sm font-bold px-4 md:px-6 py-2 md:py-3 rounded-xl self-start">
+                        SCOPRI DI PIÙ
+                    </a>
+                </div>
+
+                <!-- CARD 4 -->
+                <div
+                    class="w-[90vw] max-w-[400px] h-[60vw] max-h-[320px] rounded-3xl p-6 md:p-8 flex-shrink-0 shadow-lg relative bg-cover bg-center flex flex-col justify-between"
+                    style="background-image: url('/images/nondisp.jpg');"
+                >
+                    <div>
+                        <h3 class="text-lg md:text-xl font-extrabold text-white mb-3 leading-tight">TAPPA TERMINATA</h3>
+                        <p class="text-sm md:text-base text-white mb-3">
+                            Tappa non disponibile al momento.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD 5 -->
+                <div
+                    class="w-[90vw] max-w-[400px] h-[60vw] max-h-[320px] rounded-3xl p-6 md:p-8 flex-shrink-0 shadow-lg relative bg-cover bg-center flex flex-col justify-between"
+                    style="background-image: url('/images/nondisp.jpg');"
+                >
+                    <div>
+                        <h3 class="text-lg md:text-xl font-extrabold text-white mb-3 leading-tight">TAPPA TERMINATA</h3>
+                        <p class="text-sm md:text-base text-white mb-3">
+                            Tappa non disponibile al momento.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Fine container cards -->
+
+            <!-- Bottoni di navigazione -->
+            <div class="flex justify-center mt-4 gap-4">
+                <button
+                    type="button"
+                    id="carousel-left"
+                    class="bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full w-10 h-10 flex items-center justify-center shadow"
+                    aria-label="Scorri a sinistra"
+                >
+                    &#8592;
+                </button>
+                <button
+                    type="button"
+                    id="carousel-right"
+                    class="bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full w-10 h-10 flex items-center justify-center shadow"
+                    aria-label="Scorri a destra"
+                >
+                    &#8594;
+                </button>
+            </div>
+            <!-- Fine bottoni di navigazione -->
+        </div>
+        <!-- Fine carousel orizzontale -->
+
+        <!-- Stili per nascondere la scrollbar -->
+        <style>
+            .no-scrollbar::-webkit-scrollbar { display: none; }
+            .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+        </style>
+
+        <!-- Script per la navigazione del carousel con chatgpt -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const container = document.getElementById('carousel-container');
+                const leftBtn = document.getElementById('carousel-left');
+                const rightBtn = document.getElementById('carousel-right');
+                // Calcolo dinamico dello scroll in base alla larghezza della card
+                function getScrollAmount() {
+                    const card = container.querySelector('div');
+                    if (!card) return 300;
+                    const style = window.getComputedStyle(card);
+                    const width = card.offsetWidth;
+                    const gap = parseInt(style.marginRight) || 16;
+                    return width + gap;
+                }
+                leftBtn.addEventListener('click', function() {
+                    container.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+                });
+                rightBtn.addEventListener('click', function() {
+                    container.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+                });
+            });
+        </script>
+        <!-- Fine script -->
+    </div>
+</section>
