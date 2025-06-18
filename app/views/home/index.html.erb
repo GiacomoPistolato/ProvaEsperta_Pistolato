@@ -1,117 +1,65 @@
-<div>
-<%= render partial: 'components/cookie',
-  locals: {
-    titolo_cookie: '🍪 Gestisci i tuoi cookie',
-    testo_cookie: 'Utilizziamo cookie propri e di terze parti per offrirti il miglior servizio possibile, analizzare l\'utilizzo della nostra piattaforma e fornirti annunci personalizzati. Puoi modificare le impostazioni in qualsiasi momento <a href="#" class="text-green-600 underline">qui</a>.',
-    powered_by: 'Powered by Usercentrics Consent Management',
-    link_informazioni: 'Ulteriori informazioni',
-    testo_rifiuta: 'Rifiuta',
-    testo_accetta: 'Accetta tutti'
-  }
-%>
-</div>
 
+<%# ===================== HERO DELLA PAGINA ===================== %>
 <div class="relative bg-gradient-to-br from-white to-sky-100 bg-cover bg-center">
-<%= render partial: 'components/landinghero',
-    locals: {
-      titolo: 'VIAGGI PER FAMIGLIE INDIMENTICABILI',
-      sottotitolo: 'Con la nostra agenzia puoi esplorare il mondo, vivere esperienze uniche con amici o nuovi compagni di viaggio e creare ricordi che dureranno per sempre. Personalizza il tuo itinerario e trasforma ogni viaggio nell’avventura perfetta.',
-      img_src: '/images/canyon.png',
-      bottone_primario: 'Richiedi un preventivo',
-      bottone_secondario: 'Scopri le destinazioni',
-      logo_pisto: '/images/logo.png',
-      logo_alt: 'Logo Agenzia Viaggi',
-    }
-  %>
+    <%= render partial: 'components/landinghero',
+            locals: {
+                titolo: 'VIAGGI INDIMENTICABILI PER LA VOSTRA FAMIGLIA',
+                sottotitolo: 'Con la nostra agenzia puoi esplorare il mondo, vivere esperienze uniche con amici o nuovi compagni di viaggio e creare ricordi che dureranno per sempre. Personalizza il tuo itinerario e trasforma ogni viaggio nell’avventura perfetta.',
+                img_src: '/images/canyon.png',
+                bottone_primario: 'Richiedi un preventivo',
+                bottone_secondario: 'Scopri le destinazioni',
+                logo_pisto: '/images/logo.png',
+                logo_alt: 'Logo Agenzia Viaggi',
+            }
+        %>
 
-  <%= render partial: 'components/introduzione',
-    locals:{
-        titolo1: 'Una piccola introduzione',
-        testo1:   'Siamo entusiasti di darvi il benvenuto in questo angolo straordinario del mondo, dove la natura selvaggia, le città vibranti e la cultura affascinante si intrecciano per creare esperienze uniche. Oggi vi invitiamo a partire con noi in un viaggio pensato e organizzato per famiglie con bambini',
-        titolo2:  'La combinazione perfetta',
-        testo2:    'Il nostro programma di viaggio è stato progettato per offrire una combinazione perfetta di esplorazione, relax e comfort. Ogni tappa è stata selezionata con cura per soddisfare le esigenze di ogni membro della famiglia, dai più piccoli ai genitori, garantendo esperienze che arricchiranno tutti. Dai parchi naturali mozzafiato, alle città storiche, alle attrazioni pensate appositamente per i più giovani, avrete sempre qualcosa di speciale da scoprire.',                                 
-        immagine1:  '/images/famiglia.jpeg',
-        immagine2: '/images/viaggio.jpg'
-    }
-  
-  %>
+    <%# ===================== INTRODUZIONE ===================== %>
+    <%= render partial: 'components/introduzione',
+        locals:{
+            titolo1: 'Una piccola introduzione',
+            testo1:   'Siamo entusiasti di darvi il benvenuto in questo angolo straordinario del mondo, dove la natura selvaggia, le città vibranti e la cultura affascinante si intrecciano per creare esperienze uniche. Oggi vi invitiamo a partire con noi in un viaggio pensato e organizzato per famiglie con bambini',
+            titolo2:  'La combinazione perfetta',
+            testo2:    'Il nostro programma di viaggio è stato progettato per offrire una combinazione perfetta di esplorazione, relax e comfort. Ogni tappa è stata selezionata con cura per soddisfare le esigenze di ogni membro della famiglia, dai più piccoli ai genitori, garantendo esperienze che arricchiranno tutti. Dai parchi naturali mozzafiato, alle città storiche, alle attrazioni pensate appositamente per i più giovani, avrete sempre qualcosa di speciale da scoprire.',                                 
+            immagine1:  '/images/famiglia.jpeg',
+            immagine2: '/images/viaggio.jpg'
+        }
+    %>
 
-<%= render partial: 'components/destinazionibreve',
-    locals: {
-        cards: [
-            { image: 'images/sfrancisco.jpg', title: 'San Francisco: tra ponti e colline', description: 'Giorni 1-2' },
-            { image: 'images/gcanyon.jpg', title: 'Grand Canyon: meraviglia naturale', description: 'Giorni 3-4' },
-            { image: 'images/lasvegas.jpg', title: 'Las Vegas: la città che non dorme mai', description: 'Giorni 5-6' },
-            { image: 'images/norleans.jpg', title: 'New Orleans: musica e cultura', description: 'Giorni 7-8' },
-            { image: 'images/montreal.jpg', title: 'Montreal: fascino francese in Canada', description: 'Giorni 9-10' }
-        ]
-    }
-%>
+    <%# ===================== DESTINAZIONI IN BREVE ===================== %>
+    <%= render partial: 'components/destinazionibreve',
+            locals: {
+                    cards: [
+                            { image: 'images/sfrancisco.jpg', title: 'San Francisco: tra ponti e colline', description: 'Giorni 1-2' },
+                            { image: 'images/gcanyon.jpg', title: 'Grand Canyon: meraviglia naturale', description: 'Giorni 3-4' },
+                            { image: 'images/lasvegas.jpg', title: 'Las Vegas: la città che non dorme mai', description: 'Giorni 5-6' },
+                            { image: 'images/norleans.jpg', title: 'New Orleans: musica e cultura', description: 'Giorni 7-8' },
+                            { image: 'images/montreal.jpg', title: 'Montreal: fascino francese in Canada', description: 'Giorni 9-10' }
+                    ]
+            }
+    %>
 
-<%= render partial: 'components/swiper',
-  locals: {
-    swiper: [
-      { image: '/images/swiper1.jpg' },
-      { image: '/images/swiper2.jpg'},
-      { image: '/images/swiper3.jpg'},
-    ]
-  }
-%>
+    <%# ===================== GALLERIA SWIPER ===================== %>
+    <%= render partial: 'components/swiper',
+        locals: {
+            swiper: [
+                { image: '/images/swiper1.jpg' },
+                { image: '/images/swiper2.jpg'},
+                { image: '/images/swiper3.jpg'},
+            ]
+        }
+    %>
 
-<%= render partial: 'components/sezioni',
-    locals: {
-        servizi: [
-            { image: '/images/viaggi/assicurazione_personale.png', title: 'Assicurazione Personale', description: 'Protezione per te e la tua famiglia durante il viaggio' },
-            { image: '/images/viaggi/assicurazione_volo.png', title: 'Assicurazione Volo', description: 'Copertura per cancellazioni e ritardi dei voli' },
-            { image: '/images/viaggi/assicurazione_bagagli.png', title: 'Assicurazione Bagagli', description: 'Tutela in caso di smarrimento o danneggiamento bagagli' },
-            { image: '/images/viaggi/assistenza_h24.png', title: 'Assistenza H24', description: 'Supporto continuo durante tutto il viaggio' },
-            { image: '/images/viaggi/trasferimenti.png', title: 'Trasferimenti', description: 'Servizio di trasferimento da/per aeroporti e hotel' },
-            { image: '/images/viaggi/guide_turistiche.png', title: 'Guide Turistiche', description: 'Esperti locali per visite guidate personalizzate' }
-        ]
-    }
-%>
-
-<%= render partial: 'components/footer', locals: {
-  logo_path: '/images/logo.svg',
-  uniamo_le_forze: {
-    title: 'Uniamo le forze',
-    links: [
-      { text: 'Corrieri', url: '#' },
-      { text: 'Glovo per i Partner', url: '#' },
-      { text: 'Glovo Business', url: '#' },
-      { text: 'Lavora con noi', url: '#' }
-    ]
-  },
-  link_di_interesse: {
-    title: 'Link di interesse',
-    links: [
-      { text: 'Chi siamo', url: '#' },
-      { text: 'FAQ', url: '#' },
-      { text: 'Glovo Prime', url: '#' },
-      { text: 'Blog', url: '#' },
-      { text: 'Sicurezza', url: '#' },
-      { text: 'Contattaci', url: '#' }
-    ]
-  },
-  seguici: {
-    title: 'Seguici',
-    links: [
-      { text: 'TikTok', url: '#' },
-      { text: 'Instagram', url: '#' }
-    ]
-  },
-  app_store_link: '#',
-  app_store_image: '/images/glovo/app-store-button.svg',
-  google_play_link: '#',
-  google_play_image: '/images/glovo/google-play-button.svg',
-  additional_links: [
-    { text: 'Politica sulla privacy', url: '#' },
-    { text: 'Politica sui cookie', url: '#' },
-    { text: 'Termini e condizioni', url: '#' },
-    { text: 'Conformità', url: '#' },
-    { text: 'Configura i cookie', url: '#' }
-  ],
-  languages: ['Italiano']
-} %>
-
+    <%# ===================== SEZIONI SERVIZI ===================== %>
+    <%= render partial: 'components/sezioni',
+            locals: {
+                    servizi: [
+                            { image: '/images/personale.png', title: 'Assicurazione Personale', description: 'Protezione per te e la tua famiglia durante il viaggio' },
+                            { image: '/images/volo.png', title: 'Assicurazione Volo', description: 'Copertura per cancellazioni e ritardi dei voli' },
+                            { image: '/images/bagagli.png', title: 'Assicurazione Bagagli', description: 'Tutela in caso di smarrimento o danneggiamento bagagli' },
+                            { image: '/images/24h.png', title: 'Assistenza H24', description: 'Supporto continuo durante tutto il viaggio' },
+                            { image: '/images/trasferimenti.png', title: 'Trasferimenti', description: 'Servizio di trasferimento da/per aeroporti e hotel' },
+                            { image: '/images/guida.png', title: 'Guide Turistiche', description: 'Esperti locali per visite guidate personalizzate' }
+                    ]
+            }
+    %>
 </div>

@@ -11,7 +11,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
         <% servizi.each do |servizio| %>
             <div class="border rounded-xl p-4 flex flex-col items-center justify-center transition-colors duration-200 hover:border-[#b32e2b]">
-                <img src="<%= servizio[:image] %>" alt="<%= servizio[:title] %>" class="w-6 h-6 mb-2" />
+                <img src="<%= servizio[:image] %>" alt="<%= servizio[:title] %>" class="w-12 h-12 mb-2" />
                 <p class="text-sm text-[#b32e2b] font-semibold"><%= servizio[:title] %></p>
                 <% if servizio[:description].present? %>
                     <p class="text-sm text-[#0c3261] -mt-1"><%= servizio[:description] %></p>

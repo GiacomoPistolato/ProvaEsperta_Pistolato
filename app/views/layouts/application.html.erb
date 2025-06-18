@@ -23,8 +23,63 @@
   </head>
 
   <body>
+  <%# ===================== COOKIE ===================== %>
+   <%= render partial: 'components/cookie',
+        locals: {
+            titolo_cookie: '🍪 Gestisci i tuoi cookie',
+            testo_cookie: 'Utilizziamo cookie propri e di terze parti per offrirti il miglior servizio possibile, analizzare l\'utilizzo della nostra piattaforma e fornirti annunci personalizzati. Puoi modificare le impostazioni in qualsiasi momento <a href="#" class="text-green-600 underline">qui</a>.',
+            powered_by: 'Powered by Usercentrics Consent Management',
+            link_informazioni: 'Ulteriori informazioni',
+            testo_rifiuta: 'Rifiuta',
+            testo_accetta: 'Accetta tutti'
+        }
+    %>
+  
     <main class="flex flex-col min-h-screen">
       <%= yield %>
     </main>
+    <%# ===================== FOOTER ===================== %>
+    <%= render partial: 'components/footer', locals: {
+            logo_path: '/images/logo.png',
+            uniamo_le_forze: {
+                    title: 'I nostri servizi',
+                    links: [
+                            { text: 'Viaggi su misura', url: '#' },
+                            { text: 'Tour di gruppo', url: '#' },
+                            { text: 'Assicurazione viaggio', url: '#' },
+                            { text: 'Lavora con noi', url: '#' }
+                    ]
+            },
+            link_di_interesse: {
+                    title: 'Link utili',
+                    links: [
+                            { text: 'Chi siamo', url: '#' },
+                            { text: 'FAQ', url: '#' },
+                            { text: 'Destinazioni', url: '#' },
+                            { text: 'Blog di viaggio', url: '#' },
+                            { text: 'Consigli utili', url: '#' },
+                            { text: 'Contattaci', url: '#' }
+                    ]
+            },
+            seguici: {
+                    title: 'Seguici',
+                    links: [
+                            { text: 'Facebook', url: '#' },
+                            { text: 'Instagram', url: '#' }
+                    ]
+            },
+            app_store_link: '#',
+            app_store_image: '/images/app-store.png',
+            google_play_link: '#',
+            google_play_image: '/images/play-store.png',
+            additional_links: [
+                    { text: 'Privacy Policy', url: '#' },
+                    { text: 'Cookie Policy', url: '#' },
+                    { text: 'Termini e condizioni', url: '#' },
+                    { text: 'Consenso Cookie', url: '#' }
+            ],
+            languages: ['Italiano']
+    } %>
   </body>
+  
 </html>
