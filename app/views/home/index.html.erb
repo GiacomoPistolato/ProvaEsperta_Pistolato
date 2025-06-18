@@ -58,4 +58,60 @@
   }
 %>
 
+<%= render partial: 'components/sezioni',
+    locals: {
+        servizi: [
+            { image: '/images/viaggi/assicurazione_personale.png', title: 'Assicurazione Personale', description: 'Protezione per te e la tua famiglia durante il viaggio' },
+            { image: '/images/viaggi/assicurazione_volo.png', title: 'Assicurazione Volo', description: 'Copertura per cancellazioni e ritardi dei voli' },
+            { image: '/images/viaggi/assicurazione_bagagli.png', title: 'Assicurazione Bagagli', description: 'Tutela in caso di smarrimento o danneggiamento bagagli' },
+            { image: '/images/viaggi/assistenza_h24.png', title: 'Assistenza H24', description: 'Supporto continuo durante tutto il viaggio' },
+            { image: '/images/viaggi/trasferimenti.png', title: 'Trasferimenti', description: 'Servizio di trasferimento da/per aeroporti e hotel' },
+            { image: '/images/viaggi/guide_turistiche.png', title: 'Guide Turistiche', description: 'Esperti locali per visite guidate personalizzate' }
+        ]
+    }
+%>
+
+<%= render partial: 'components/footer', locals: {
+  logo_path: '/images/logo.svg',
+  uniamo_le_forze: {
+    title: 'Uniamo le forze',
+    links: [
+      { text: 'Corrieri', url: '#' },
+      { text: 'Glovo per i Partner', url: '#' },
+      { text: 'Glovo Business', url: '#' },
+      { text: 'Lavora con noi', url: '#' }
+    ]
+  },
+  link_di_interesse: {
+    title: 'Link di interesse',
+    links: [
+      { text: 'Chi siamo', url: '#' },
+      { text: 'FAQ', url: '#' },
+      { text: 'Glovo Prime', url: '#' },
+      { text: 'Blog', url: '#' },
+      { text: 'Sicurezza', url: '#' },
+      { text: 'Contattaci', url: '#' }
+    ]
+  },
+  seguici: {
+    title: 'Seguici',
+    links: [
+      { text: 'TikTok', url: '#' },
+      { text: 'Instagram', url: '#' }
+    ]
+  },
+  app_store_link: '#',
+  app_store_image: '/images/glovo/app-store-button.svg',
+  google_play_link: '#',
+  google_play_image: '/images/glovo/google-play-button.svg',
+  additional_links: [
+    { text: 'Politica sulla privacy', url: '#' },
+    { text: 'Politica sui cookie', url: '#' },
+    { text: 'Termini e condizioni', url: '#' },
+    { text: 'Conformità', url: '#' },
+    { text: 'Configura i cookie', url: '#' }
+  ],
+  languages: ['Italiano']
+} %>
+
 </div>

@@ -1,0 +1,22 @@
+<section class="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+    <!-- Titolo e descrizione -->
+    <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-[#b32e2b]">I servizi a tua disposizione</h2>
+        <p class="mt-2 text-[#0c3261] text-base">
+            Scopri tutti i nostri servizi pensati per rendere la tua permanenza più confortevole e piacevole.
+        </p>
+    </div>
+
+    <!-- Servizi -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+        <% servizi.each do |servizio| %>
+            <div class="border rounded-xl p-4 flex flex-col items-center justify-center transition-colors duration-200 hover:border-[#b32e2b]">
+                <img src="<%= servizio[:image] %>" alt="<%= servizio[:title] %>" class="w-6 h-6 mb-2" />
+                <p class="text-sm text-[#b32e2b] font-semibold"><%= servizio[:title] %></p>
+                <% if servizio[:description].present? %>
+                    <p class="text-sm text-[#0c3261] -mt-1"><%= servizio[:description] %></p>
+                <% end %>
+            </div>
+        <% end %>
+    </div>
+</section>
