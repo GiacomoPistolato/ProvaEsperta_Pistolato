@@ -1,0 +1,12 @@
+<h1 class="text-3xl text-center font-bold text-[#b32e2b] mb-6">Tappe culturali</h1>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
+    <% cards.each do |card| %>
+        <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-200 hover:scale-105">
+            <%= image_tag card[:image], alt: card[:title], class: "w-full h-48 object-cover" %>
+            <div class="p-4">
+                <h2 class="text-xl text-[#b32e2b] font-semibold mb-11"><%= card[:title] %></h2>
+                <p class="text-[#0c3261]"><%= card[:description] %></p>
+            </div>
+        </div>
+    <% end %>
+</div>

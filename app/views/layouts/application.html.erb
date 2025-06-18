@@ -24,7 +24,7 @@
 
   <body>
   <%# ===================== COOKIE ===================== %>
-   <%= render partial: 'components/cookie',
+   <%= render partial: 'components/application/cookie',
         locals: {
             titolo_cookie: '🍪 Gestisci i tuoi cookie',
             testo_cookie: 'Utilizziamo cookie propri e di terze parti per offrirti il miglior servizio possibile, analizzare l\'utilizzo della nostra piattaforma e fornirti annunci personalizzati. Puoi modificare le impostazioni in qualsiasi momento <a href="#" class="text-green-600 underline">qui</a>.',
@@ -39,8 +39,8 @@
       <%= yield %>
     </main>
     <%# ===================== FOOTER ===================== %>
-    <%= render partial: 'components/footer', locals: {
-            logo_path: '/images/logo.png',
+    <%= render partial: 'components/application/footer', locals: {
+            logo_path: '/images/index/logo.png',
             uniamo_le_forze: {
                     title: 'I nostri servizi',
                     links: [

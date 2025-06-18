@@ -1,0 +1,79 @@
+<%# ===================== HERO DELLA PAGINA ===================== %>
+<div class="relative bg-gradient-to-br from-white to-sky-100 bg-cover bg-center">
+
+    <%# Sezione Hero: titolo, sottotitolo, immagini e bottoni %>
+    <%= render partial: 'components/landinghero',
+            locals: {
+                titolo: 'VIAGGI INDIMENTICABILI PER LA VOSTRA FAMIGLIA',
+                sottotitolo: 
+                    'Con la nostra agenzia puoi esplorare il mondo, vivere esperienze uniche con amici o nuovi compagni di viaggio e creare ricordi che dureranno per sempre. ' \
+                    'Personalizza il tuo itinerario e trasforma ogni viaggio nell’avventura perfetta.',
+                img_src: '/images/beatgen/beatgen.jpg',
+                bottone_primario: 'Richiedi un preventivo',
+                bottone_secondario: 'Scopri le destinazioni',
+                logo_pisto: '/images/index/logo.png',
+                logo_alt: 'Logo Agenzia Viaggi',
+            }
+    %>
+
+    <%# ===================== INTRODUZIONE ===================== %>
+    <%# Sezione Introduzione: testi descrittivi e immagini %>
+    <%= render partial: 'components/introduzione',
+            locals: {
+                titolo1: 
+                    'San Francisco Beat: un viaggio tra poesia, ribellione e cultura',
+                testo1: 
+                    'Se desideri un’esperienza di viaggio fuori dagli schemi, ti proponiamo un itinerario affascinante nel cuore della San Francisco più autentica e anticonformista. ' \
+                    'Qui, negli anni ’50, è nata la Beat Generation, un movimento culturale che ha rivoluzionato la letteratura americana e il modo stesso di vivere la libertà.' "\n\n" \
+                    'Con il nostro tour dedicato, ti porteremo a scoprire North Beach, il quartiere dove artisti come Jack Kerouac, Allen Ginsberg e Lawrence Ferlinghetti hanno trovato rifugio e ispirazione. ' \
+                    'Tra caffè storici, murales e librerie indipendenti, potrai respirare quell’atmosfera bohémien che ancora oggi anima le sue strade.' "\n\n" \
+                    'Tappa imperdibile sarà la leggendaria City Lights Bookstore, libreria e casa editrice simbolo della controcultura, dove la poesia beat continua a vivere tra scaffali intrisi di storia e parole che hanno cambiato il mondo.' "\n\n" \
+                    'Passeggeremo lungo Columbus Avenue, dove jazz, arte e spirito ribelle si fondono in un’esperienza intensa e coinvolgente.' "\n\n" \
+                    'San Francisco, con noi, non sarà solo una destinazione: sarà un viaggio nell’anima di un’epoca rivoluzionaria. Lasciati trasportare da un percorso fatto di cultura, passione e libertà espressiva.',
+                titolo2: 
+                    'Il fascino del 900, il maestoso gate bridge',
+                testo2: 
+                    'Celebre per i suoi tram storici, il maestoso Golden Gate Bridge e le strade ondulate da film, San Francisco è molto più di una cartolina vivente. ' \
+                    'È anche la culla della Beat Generation, il movimento culturale che ha rivoluzionato la letteratura, l’arte e il pensiero del Novecento.' "\n\n" \
+                    'Con i nostri itinerari personalizzati, ti offriamo un viaggio che unisce storia, fascino urbano e libertà d’espressione, il tutto in un’esperienza adatta anche ai più piccoli. ' \
+                    'Grazie al perfetto equilibrio tra cultura e divertimento, San Francisco può diventare l’avventura perfetta per tutta la famiglia: stimolante per gli adulti, coinvolgente per i bambini.',
+                immagine1: '/images/beatgen/SanFbeat.jpg',
+                immagine2: '/images/beatgen/Beatgen900.jpg'
+            }
+    %>
+
+    <%# ===================== CARD LUOGHI ICONICI ===================== %>
+    <%# Sezione Card: luoghi iconici della Beat Generation %>
+    <%= render partial: 'components/card',
+            locals: {
+                cards: [
+                    {
+                        image: '/images/beatgen/CLB.jpg',
+                        title: 'City Lights Bookstore – 261 Columbus Ave',
+                        description: 
+                            'Fondata nel 1953 da Lawrence Ferlinghetti, è molto più di una libreria: è un vero santuario della controcultura. ' \
+                            'Ancora oggi propone testi radicali, poesia e letteratura indipendente. ' \
+                            'Al secondo piano, ti attende una sezione interamente dedicata ai grandi autori beat. ' \
+                            'Un luogo dove ogni scaffale racconta una rivoluzione.'
+                    },
+                    {
+                        image: '/images/beatgen/CT.jpg',
+                        title: 'Caffè Trieste – 601 Vallejo St',
+                        description: 
+                            'Un’icona di North Beach e uno dei primi caffè in stile europeo della città. ' \
+                            'Qui i beat si riunivano per leggere poesie, bere espresso e lasciarsi ispirare dalla musica. ' \
+                            'L’atmosfera bohémienne è rimasta intatta: ogni tavolino custodisce frammenti di storia e arte.'
+                    },
+                    {
+                        image: '/images/beatgen/TBM.jpg',
+                        title: 'The Beat Museum – 540 Broadway',
+                        description: 
+                            'Una tappa imperdibile per chi vuole immergersi completamente nell’universo beat. ' \
+                            'Questo piccolo ma ricchissimo museo raccoglie manoscritti originali, lettere, fotografie, oggetti personali e prime edizioni dei testi che hanno segnato un’epoca. ' \
+                            'Un viaggio nel cuore pulsante della rivoluzione culturale americana.'
+                    }
+                ]
+            }
+    %>
+
+</div>

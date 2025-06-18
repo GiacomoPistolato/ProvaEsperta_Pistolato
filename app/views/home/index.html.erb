@@ -1,14 +1,13 @@
-
 <%# ===================== HERO DELLA PAGINA ===================== %>
 <div class="relative bg-gradient-to-br from-white to-sky-100 bg-cover bg-center">
     <%= render partial: 'components/landinghero',
             locals: {
                 titolo: 'VIAGGI INDIMENTICABILI PER LA VOSTRA FAMIGLIA',
                 sottotitolo: 'Con la nostra agenzia puoi esplorare il mondo, vivere esperienze uniche con amici o nuovi compagni di viaggio e creare ricordi che dureranno per sempre. Personalizza il tuo itinerario e trasforma ogni viaggio nell’avventura perfetta.',
-                img_src: '/images/canyon.png',
+                img_src: '/images/index/canyon.png',
                 bottone_primario: 'Richiedi un preventivo',
                 bottone_secondario: 'Scopri le destinazioni',
-                logo_pisto: '/images/logo.png',
+                logo_pisto: '/images/index/logo.png',
                 logo_alt: 'Logo Agenzia Viaggi',
             }
         %>
@@ -20,8 +19,8 @@
             testo1:   'Siamo entusiasti di darvi il benvenuto in questo angolo straordinario del mondo, dove la natura selvaggia, le città vibranti e la cultura affascinante si intrecciano per creare esperienze uniche. Oggi vi invitiamo a partire con noi in un viaggio pensato e organizzato per famiglie con bambini',
             titolo2:  'La combinazione perfetta',
             testo2:    'Il nostro programma di viaggio è stato progettato per offrire una combinazione perfetta di esplorazione, relax e comfort. Ogni tappa è stata selezionata con cura per soddisfare le esigenze di ogni membro della famiglia, dai più piccoli ai genitori, garantendo esperienze che arricchiranno tutti. Dai parchi naturali mozzafiato, alle città storiche, alle attrazioni pensate appositamente per i più giovani, avrete sempre qualcosa di speciale da scoprire.',                                 
-            immagine1:  '/images/famiglia.jpeg',
-            immagine2: '/images/viaggio.jpg'
+            immagine1:  '/images/index/famiglia.jpeg',
+            immagine2: '/images/index/viaggio.jpg'
         }
     %>
 
@@ -29,11 +28,11 @@
     <%= render partial: 'components/destinazionibreve',
             locals: {
                     cards: [
-                            { image: 'images/sfrancisco.jpg', title: 'San Francisco: tra ponti e colline', description: 'Giorni 1-2' },
-                            { image: 'images/gcanyon.jpg', title: 'Grand Canyon: meraviglia naturale', description: 'Giorni 3-4' },
-                            { image: 'images/lasvegas.jpg', title: 'Las Vegas: la città che non dorme mai', description: 'Giorni 5-6' },
-                            { image: 'images/norleans.jpg', title: 'New Orleans: musica e cultura', description: 'Giorni 7-8' },
-                            { image: 'images/montreal.jpg', title: 'Montreal: fascino francese in Canada', description: 'Giorni 9-10' }
+                            { image: '/images/index/sfrancisco.jpg', title: 'San Francisco: tra ponti e colline', description: 'Giorni 1-2' },
+                            { image: '/images/index/gcanyon.jpg', title: 'Grand Canyon: meraviglia naturale', description: 'Giorni 3-4' },
+                            { image: '/images/index/lasvegas.jpg', title: 'Las Vegas: la città che non dorme mai', description: 'Giorni 5-6' },
+                            { image: '/images/index/norleans.jpg', title: 'New Orleans: musica e cultura', description: 'Giorni 7-8' },
+                            { image: '/images/index/montreal.jpg', title: 'Montreal: fascino francese in Canada', description: 'Giorni 9-10' }
                     ]
             }
     %>
@@ -42,9 +41,9 @@
     <%= render partial: 'components/swiper',
         locals: {
             swiper: [
-                { image: '/images/swiper1.jpg' },
-                { image: '/images/swiper2.jpg'},
-                { image: '/images/swiper3.jpg'},
+                { image: '/images/index/swiper1.jpg' },
+                { image: '/images/index/swiper2.jpg'},
+                { image: '/images/index/swiper3.jpg'},
             ]
         }
     %>
@@ -53,12 +52,12 @@
     <%= render partial: 'components/sezioni',
             locals: {
                     servizi: [
-                            { image: '/images/personale.png', title: 'Assicurazione Personale', description: 'Protezione per te e la tua famiglia durante il viaggio' },
-                            { image: '/images/volo.png', title: 'Assicurazione Volo', description: 'Copertura per cancellazioni e ritardi dei voli' },
-                            { image: '/images/bagagli.png', title: 'Assicurazione Bagagli', description: 'Tutela in caso di smarrimento o danneggiamento bagagli' },
-                            { image: '/images/24h.png', title: 'Assistenza H24', description: 'Supporto continuo durante tutto il viaggio' },
-                            { image: '/images/trasferimenti.png', title: 'Trasferimenti', description: 'Servizio di trasferimento da/per aeroporti e hotel' },
-                            { image: '/images/guida.png', title: 'Guide Turistiche', description: 'Esperti locali per visite guidate personalizzate' }
+                            { image: '/images/index/personale.png', title: 'Assicurazione Personale', description: 'Protezione per te e la tua famiglia durante il viaggio' },
+                            { image: '/images/index/volo.png', title: 'Assicurazione Volo', description: 'Copertura per cancellazioni e ritardi dei voli' },
+                            { image: '/images/index/bagagli.png', title: 'Assicurazione Bagagli', description: 'Tutela in caso di smarrimento o danneggiamento bagagli' },
+                            { image: '/images/index/24h.png', title: 'Assistenza H24', description: 'Supporto continuo durante tutto il viaggio' },
+                            { image: '/images/index/trasferimenti.png', title: 'Trasferimenti', description: 'Servizio di trasferimento da/per aeroporti e hotel' },
+                            { image: '/images/index/guida.png', title: 'Guide Turistiche', description: 'Esperti locali per visite guidate personalizzate' }
                     ]
             }
     %>
